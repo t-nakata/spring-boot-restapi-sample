@@ -55,7 +55,7 @@ data class Users(
         val message: String
 )
 
-data class UserCreateResponse (
+data class UserCreateResponse(
         val user: User,
         val status: String,
         val message: String
