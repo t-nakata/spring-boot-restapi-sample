@@ -1,31 +1,31 @@
 # 前置き
 自分は普段AndroidエンジニアとしてKotlinをメインに書いている人間です。
 
-サーバーサイドの実装が必要で技術選定のために参考のために作成。
+サーバーサイドの実装が必要で技術選定のために参考のために作成。  
 SpringBootを使ってRestAPIを作ってみた。
 
 # 環境、バージョンなど
-OS: macOS Mojave v10.14.5
-IDE： InteliJ 2019.2 Ultimate Edition （無料期間)
-言語： Kotlin v1.2.71 Java 1.8
-DB: MySQL ver 8.0.17 for osx10.14 on x86_64(Homebrew)
+OS: macOS Mojave v10.14.5  
+IDE： InteliJ 2019.2 Ultimate Edition （無料期間)  
+言語： Kotlin v1.2.71 Java 1.8  
+DB: MySQL ver 8.0.17 for osx10.14 on x86_64(Homebrew)  
 
 # この記事で最終的に出来ること
 ## GETリクエスト
-`/user`にGetリクエストすることで
+`/user`にGetリクエストすることで  
 データベースから取得した、ユーザー一覧をJsonで取得できること
 
 ## POSTリクエスト
-`/user/create`にPOSTリクエストすることで、
+`/user/create`にPOSTリクエストすることで、  
 データベースへユーザー情報をInsertすることができ、結果をJsonで取得できること
 
 # MySQLの準備
 構築に関しては割愛します。
 
-ローカルで動作する、Mysqlサーバーに下記データベースとユーザーを作成。
-ベース名: `sample_db`
-ユーザー名: `web_app`
-パスワード： `hogehoge`
+ローカルで動作する、Mysqlサーバーに下記データベースとユーザーを作成。  
+ベース名: `sample_db`  
+ユーザー名: `web_app`  
+パスワード： `hogehoge`  
 
 ```
 CREATE DATABASE sample_db;
@@ -64,7 +64,7 @@ https://start.spring.io
 
 ※ 不要なDependenciesも追加してしまっていますがご愛嬌ということでお願いします！
 
-上記を設定して`Generate the project`をクリックするとプロジェクトがダウンロードされます。
+上記を設定して`Generate the project`をクリックするとプロジェクトがダウンロードされます。  
 IntelliJでImportしてGradleを指定しプロジェクトを開きます。
 
 # 設定など
