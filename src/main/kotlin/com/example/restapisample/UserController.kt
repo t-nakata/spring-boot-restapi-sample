@@ -20,7 +20,11 @@ class UserController constructor(private val userRepository: UserRepository) {
     }
 
     @PostConstruct
-    fun seed() {
+    fun init() {
+        createSeed()
+    }
+
+    private fun createSeed() {
         if (userRepository.findAll().isEmpty()) {
             userRepository.save(
                     User(name = "test.tarou", email = "sample@example.com")
